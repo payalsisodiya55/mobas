@@ -44,6 +44,7 @@ import { clearModuleAuth } from "@/lib/utils/auth"
 export default function Profile() {
   const { userProfile, vegMode, setVegMode } = useProfile()
   const navigate = useNavigate()
+  const companyName = useCompanyName()
   
   // Popup states
   const [vegModeOpen, setVegModeOpen] = useState(false)

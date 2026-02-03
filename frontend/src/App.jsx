@@ -111,6 +111,20 @@ import DeliverySignupStep1 from "@/module/delivery/pages/auth/SignupStep1"
 import DeliverySignupStep2 from "@/module/delivery/pages/auth/SignupStep2"
 import DeliveryWelcome from "@/module/delivery/pages/auth/Welcome"
 
+// Grocery Module Imports
+import GroceryHome from "@/module/grocery/Home"
+import GroceryCart from "@/module/grocery/Cart"
+import GroceryProductDetail from "@/module/grocery/ProductDetail"
+import GroceryCategories from "@/module/grocery/Categories"
+import GroceryCategory from "@/module/grocery/Category"
+import GrocerySearch from "@/module/grocery/Search"
+import GroceryCheckout from "@/module/grocery/Checkout"
+import GroceryOrders from "@/module/grocery/Orders"
+import GroceryOrderDetail from "@/module/grocery/OrderDetail"
+import GroceryAccount from "@/module/grocery/Account"
+import GroceryCheckoutAddress from "@/module/grocery/CheckoutAddress"
+import GroceryLayout from "@/module/grocery/components/GroceryLayout"
+
 function UserPathRedirect() {
   const location = useLocation()
   const newPath = location.pathname.replace(/^\/user/, "") || "/"
@@ -819,6 +833,21 @@ export default function App() {
           </ProtectedRoute>
         } 
       />
+
+      {/* Grocery Module Routes */}
+      <Route element={<GroceryLayout />}>
+        <Route path="/grocery" element={<GroceryHome />} />
+        <Route path="/grocery/cart" element={<GroceryCart />} />
+        <Route path="/grocery/product/:id" element={<GroceryProductDetail />} />
+        <Route path="/grocery/categories" element={<GroceryCategories />} />
+        <Route path="/grocery/category/:id" element={<GroceryCategory />} />
+        <Route path="/grocery/search" element={<GrocerySearch />} />
+        <Route path="/grocery/checkout" element={<GroceryCheckout />} />
+        <Route path="/grocery/checkout/address" element={<GroceryCheckoutAddress />} />
+        <Route path="/grocery/orders" element={<GroceryOrders />} />
+        <Route path="/grocery/orders/:id" element={<GroceryOrderDetail />} />
+        <Route path="/grocery/account" element={<GroceryAccount />} />
+      </Route>
 
       <Route 
         path="/*" 
