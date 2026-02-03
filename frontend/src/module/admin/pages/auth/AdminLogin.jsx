@@ -19,8 +19,8 @@ import appzetoLogo from "@/assets/appzetologo.png"
 
 export default function AdminLogin() {
   const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("Mobasketindia@gmail.com")
+  const [password, setPassword] = useState("123456")
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")

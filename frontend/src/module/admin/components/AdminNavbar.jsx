@@ -446,6 +446,13 @@ export default function AdminNavbar({ onMenuClick }) {
                     <Settings className="mr-2 w-4 h-4" />
                     <span>Settings</span>
                   </DropdownMenuItem>
+                  <DropdownMenuItem
+                    className="cursor-pointer hover:bg-neutral-100 focus:bg-neutral-100"
+                    onClick={() => window.open(window.location.origin + "/admin/grocery", "_blank")}
+                  >
+                    <Package className="mr-2 w-4 h-4" />
+                    <span>Open Grocery Admin</span>
+                  </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem 

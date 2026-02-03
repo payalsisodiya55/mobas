@@ -27,13 +27,13 @@ const createAdmin = async () => {
 
         // Admin details
         const adminData = {
-            name: 'Ajay Panchal',
-            email: 'panchalajay717@gmail.com',
-            phone: '7610416911',
+            name: 'Mobasket Admin',
+            email: 'Mobasketindia@gmail.com',
+            phone: '9999999999',
             password: '123456',
             role: 'admin',
             isActive: true,
-            phoneVerified: false
+            phoneVerified: true
         };
 
         // Check if admin already exists
